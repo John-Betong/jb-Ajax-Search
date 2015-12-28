@@ -69,7 +69,7 @@ Having a working online demo made debugging easier because any failed alternativ
 1. **index.php**          - *displays the Live Search and also links to all source code.*
 2. **_ajax-form.php**     - *required() by index.php. Also contains JavaScript.*
 3. **db-results.php**     - *a standalone file that renders database table results also called from the Ajax routine. This file is essential and must display the database table results in order for Ajax to work correctly.*
-4. **REDME.md**           - *this file*
+4. **README.md**           - *this file*
 5. **jb-search.zip**      - *zipped contents to be dowloaded and installed into "new-driectory*
 
 
