@@ -42,13 +42,6 @@ Creating a new database and table seemed a lot of work just to show a demo with 
 3.  set path to **"db-results.php"**  in **"ajax-form.php"** 
 
 
-#### Suggested Improvements:
-	- add fields to $sql statement
-	- format search results
-	- add pagination to search results
-	- move JavaScript to just before </body> 
-
-
 #### TL;DR
 Recently I have been searching database tables containing foreign characters and tried numerous techniques. Results revealed there is no simple solution.  Two effective but slow, clunky methods were syllables and phonemes. 
 
@@ -72,6 +65,12 @@ Having a working online demo made debugging easier because any failed alternativ
 4. **README.md**           - *this file*
 5. **jb-search.zip**      - *zipped contents to be dowloaded and installed into "new-driectory*
 
+
+#### Suggested Improvements:
+	- add fields to $sql statement
+	- format search results
+	- add pagination to search results
+	- move JavaScript to just before </body> 
 
 
 ##### Have fun :)
