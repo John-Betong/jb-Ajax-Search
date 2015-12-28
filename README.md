@@ -23,13 +23,13 @@ Creating a new database and table seemed a lot of work just to show a demo with 
 		- Unpack into any new localhost or online "new-directory"
 
 ##### Step 2: use any editor to modify "**db-results.php**"
-		- define('HOST',  '**yourHost**');
-		- define('uNAME', '**userName**');
-		- define('pWORD', '**passWord**');  
-		- define('dBASE', '**dataBase**'); 
-		- define('dTABLE',  '**tableName**'); 
-		- define('dCOL001', '**columnName**'); // field *MUST* be varchar or text
-                - define('dCOL002', '**columnName**'); // field *MUST* be NULL or (varchar or text)
+	- define('HOST',  '**yourHost**');
+	- define('uNAME', '**userName**');
+	- define('pWORD', '**passWord**');  
+	- define('dBASE', '**dataBase**'); 
+	- define('dTABLE',  '**tableName**'); 
+	- define('dCOL001', '**columnName**'); // field *MUST* be varchar or text
+	- define('dCOL002', '**columnName**'); // field *MUST* be NULL or (varchar or text)
 		
 
 ##### Step3: browse and open "/new-directory/index.php" 
