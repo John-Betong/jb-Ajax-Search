@@ -46,12 +46,12 @@ Creating a new database and table seemed a lot of work just to show a demo with 
 	- add pagination to search results
 
 
-#### TL;DR - Preliminary Discussion
+#### TL;DR
 Recently I have been searching database tables containing foreign characters and tried numerous techniques. Results revealed there is no simple solution.  Two effective but slow, clunky methods were syllables and phonemes. 
 
 To make nippier searches the phonemes method involved storing an extra column in the table. Both methods involved entering text into a search edit box, clicking enter, parsing the search text into a SQL statement, searching and returning partial or empty no results.
 
-#### [Ajax to the Rescue](https://en.wikipedia.org/wiki/Ajax_(programming)
+####[Ajax to the Rescue](https://en.wikipedia.org/wiki/Ajax_(programming))
 Although I have never been a JavaScript fan; this was definitely a big plus for **Ajax**. Primarily because only a single character needs uploading to a fast server which uses PHP's MySql used to dynamcally render the browser results.
 
 ####[W3School's Ajax Tutorial](http://www.w3schools.com/ajax/default.asp)
