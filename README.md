@@ -29,7 +29,7 @@ Creating a new database and table seemed a lot of work just to show a demo with 
 		- define('dBASE', '**dataBase**'); 
 		- define('dTABLE',  '**tableName**'); 
 		- define('dCOL001', '**columnName**'); // field *MUST* be varchar or text
-    		- define('dCOL002', '**columnName**'); // field *MUST* be NULL or (varchar or text)
+                - define('dCOL002', '**columnName**'); // field *MUST* be NULL or (varchar or text)
 		
 
 ##### Step3: browse and open "/new-directory/index.php" 
@@ -46,6 +46,7 @@ Creating a new database and table seemed a lot of work just to show a demo with 
 	- add fields to $sql statement
 	- format search results
 	- add pagination to search results
+	- move JavaScript to just before </body> 
 
 
 #### TL;DR
