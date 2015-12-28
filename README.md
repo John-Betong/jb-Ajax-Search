@@ -28,7 +28,9 @@ Creating a new database and table seemed a lot of work just to show a demo with 
 		- define('pWORD', '**passWord**');  
 		- define('dBASE', '**dataBase**'); 
 		- define('dTABLE',  '**tableName**'); 
-		- define('dCOLUMN', '**columnName**'); // field must be varchar or text 
+		- define('dCOL001', '**columnName**'); // field *MUST* be varchar or text
+    		- define('dCOL002', '**columnName**'); // field *MUST* be NULL or (varchar or text)
+		
 
 ##### Step3: browse and open "/new-directory/index.php" 
 		- finished in less than a minute!
