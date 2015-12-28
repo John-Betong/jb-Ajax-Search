@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajax Dynamic Search Tutorial | by John_Betong</title>
+<style type="text/css">
+body  {background-color:#f5f5f5; margin:0; padding:0;}
+hr    {width:88%; margin:auto; color:#f0f0f0; line-height:1px;}
+dl dt {font-weight:700; font-size:large; margin:0 0 0.21em 0;}
+.logo {width:100%; height:5.5em; background-color:#000; color:snow;}
+.main {max-width:988px;}
+
+.bdr  {border:solid 1px #aaa;}
+.bgs  {background-color:snow;} 
+.clc  {color:#ccc;} .cls  {color:snow;} 
+.fll  {float:left;} .flr {float:right;}
+.fss  {font-size:small;} .fs3 {font-size:x-large;}
+.fwb  {font-weight:700;}
+.mga  {margin:1em auto 0;} .mg4 {margin:4.2em auto;}
+.ooo  {border:0; margin:0; padding:0;}
+.p42  {padding:0.42em;}
+.tac  {text-align:center;} 
+.w88  {width:88%;}
+
+.tbl {display:table;}
+.table-row {display:table-row;}
+.table-cell {display:table-cell; background-color:#f6f6f6; padding:0.42em 1em; border:solid 1px #ddd;}
+</style>
+</head>
+<body>
+
+	<div class="logo tac ooo">
+		<a class="fll"  href="index.php">
+			<img src="/afiles/gif/jb_in_shorts.gif" width="42" alt="#" />
+		</a>	
+		<a class="flr" href="https://www.sitepoint.com/community/t/search-when-iconv-fails/209863">
+		  <i class="cls">SitePoint Forum</i>
+		</a>   
+		<br />
+		<h2 class="ooo">Ajax Dynamic Search Tutorial </h2>
+		<h5 class="ooo clc">Version: 001 </h5> 
+		<sup class="flr fss cls">by John_Betong</sup> 
+	</div>
+
+<div class="main w88 mga bgs bdr p42">	
+		<h2>
+			<a href="http://www.johns-jokes.com/downloads/sp-e/jb-ajax-search/?">Online Demo</a>
+		</h2>
+		<hr />
+
+	<dl>
+		<dt>Essential Platform Requirements</dt>
+			<dd>PHP </dd>
+			<dd>MySql</dd>
+			<dd>Database and a table with a text field or varchar field</dd>
+	</dl>
+	<hr />
+
+	<dl>
+		<dt>Thoughts on Making This Tutorial</dt>
+			<dd>Creating a new database and table seemed a lot of work <br />just to show a demo with content that would only be 	used once! </dd>
+			<dd> &nbsp; </dd>
+			<dd>I opted to use:  </dd>
+			<dd> your very own database table content. </dd>
+			<dd>with a minimum setup</dd>
+			<dd>to be running in <b>under a minute!</b> </dd>
+	</dl>
+
+	<dl>
+		<dt>Special Note For the Paranoid:</dt>
+		<dd>
+	      Please feel free to copy an existing database with a table that has at least one searchable varchar or text field. 
+	  </dd>
+	</dl>  
+	<hr />
+
+	<h3>Demo Installation in Three Easy Steps:</h3>
+
+	<dl>
+	<dt>Step 1: </dt>
+    <dd>- download "jb-ajax-search.zip" </dd>
+    <dd>- Unpack into any new localhost or online "new-directory" </dd>
+		<dd> &nbsp; </dd>
+
+	<dt>Step 2: &nbsp;&nbsp; modify "<b>db-results.php</b>" and define the following constants:</dt>
+		<dd> define('HOST',  '**yourHost**'); </dd>
+		<dd> define('uNAME', '**userName**');</dd>
+		<dd> define('pWORD', '**passWord**');  </dd>
+		<dd> define('dBASE', '**dataBase**'); </dd>
+		<dd> define('dTABLE',  '**tableName**'); </dd>
+		<dd> define('dCOL001', '**columnName**'); // field  *MUST*  be varchar or text</dd>
+		<dd> define('dCOL002', '**columnName**'); // field  *MUST*  be NULL or (varchar or text)</dd>
+		<dd> &nbsp; </dd>
+	
+		<dt>Step3: &nbsp;&nbsp; browse and open "/new-directory/index.php"</dt>
+			<dd>finished in less than a minute!</dd>
+	 		<dd> &nbsp; </dd>
+	 </dl>
+	<hr />
+
+	<br />
+	<h3 class="ooo">Live Installation in Three Easy Steps:</h3>
+	<ol>
+		<li>copy &amp; paste into your web-page:  <b>&lt;?php require "ajax-form.php";?&gt;</b></li>
+		<li>copy &amp; paste to your web-page:  &nbsp;  <b>&lt;div id="livesearch"&gt;&lt;/div&gt;</b></li>
+		<li>modify <b>"ajax-form.php"</b> by setting correct path to <b>"db-results.php"</b> </li>
+	</ol>
+	<hr />
+	<br /><br />
+</div>
+
+
+
+
+<div class="main w88 mg4 bgs bdr">	
+	<dl>
+		<dt class="fs3">TL;DR</dt>
+		<dd>Recently I have been searching database tables containing foreign characters and tried numerous techniques. Results revealed there is no simple solution.  Two effective but slow, clunky methods were syllables and phonemes. 
+	</dd>
+	<dd>To make nippier searches the phonemes method involved storing an extra column in the table. Both methods involved entering text into a search edit box, clicking enter, parsing the search text into a SQL statement, searching and returning partial or empty no results.
+	</dd>
+	<dd>&nbsp;</dd>
+	<dt><a href="https://en.wikipedia.org/wiki/Ajax_(programming)">Ajax to the Rescue</a></dt>
+
+	<dd>Although I have never been a JavaScript fan; this was definitely a big plus for <b>Ajax</b>. Primarily because only a single character needs uploading to a fast server which uses PHP's MySql used to dynamcally render the browser results.
+	</dd>
+	<dd>&nbsp;</dd>
+
+	<dt><a href="http://www.w3schools.com/ajax/default.asp">W3School's Ajax Tutorial</a></dt>
+	<dd>was followed and the demos worked. Next task was to update to a server. There were some minor problems but delighted to say it also worked!
+	</dd>
+	<dd>Complications arose when trying to interface with CodeIgniter. The biggest problem was the number of files and saving to their correct paths. Simplification was essential if <b><em>Ajax</em></b> was to be used on other domains. </dd>
+	<dd>Having a working online demo made debugging easier because any failed alternative approaches could easily be rolled back. After exhaustive testing and debugging the project is now online:
+	</dd>
+	<dd>&nbsp;</dd>
+
+</dl>
+	
+	<h3> File List: </h3>
+	<div class="tbl w88 mga p42">
+		<div class="table-row fwb">
+			<div class="table-cell">#</div>
+			<div class="table-cell">Filename </div>
+			<div class="table-cell">Description</div>
+		</div>
+
+		<div class="table-row">
+			<div class="table-cell">1</div>
+			<div class="table-cell">index.php </div>
+			<div class="table-cell">displays the Live Search and links to all source code. </div>
+		</div>
+
+		<div class="table-row">
+			<div class="table-cell">2</div>
+			<div class="table-cell">ajax-form.php </div>
+			<div class="table-cell"> required() by index.php. Also contains JavaScript.</div>
+		</div>
+
+		<div class="table-row">
+			<div class="table-cell">3</div>
+			<div class="table-cell">db-results.php </div>
+			<div class="table-cell"> a standalone file that renders database table results 
+			                         also called from the Ajax routine. 
+			                         This file is essential and must display the 
+			                         database table results in order for Ajax to work correctly.
+      </div>
+		</div>
+
+		<div class="table-row">
+			<div class="table-cell">4</div>
+			<div class="table-cell">jb-search.zip</div>
+			<div class="table-cell">source files to be installed into "new-directory </div>
+		</div>
+	</div>
+	<br />
+
+	<dl>
+		<dt><b>Suggested Improvements:</b></dt>
+			<dd>- add more search fields to $sql statement </dd>
+			<dd>- format search results </dd>
+			<dd>- add pagination to search results </dd>
+			<dd>- move JavaScript to just before &lt;body&gt; </dd>
+	</dl>		
+	<hr />
+
+	<h4>Have fun :)</h4>
+</div>
+
+</body>
+</html>
