@@ -1,4 +1,4 @@
-# jb-Ajax-Search Routine - requires Php and MySql
+# jb-Ajax-Search Routine
 
 #### Essential Platform Requirements
 1. PHP 
